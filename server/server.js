@@ -16,6 +16,9 @@ app.use('/uploads', express.static('uploads'))
 app.get('/', (req, res) => {
   res.send('API Running')
 })
+app.get('/test-db', (req, res) => {
+  res.json({ message: "TEST ROUTE WORKING" })
+})
 
 const PORT = process.env.PORT || 5000
 
